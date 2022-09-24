@@ -1,8 +1,19 @@
 import React, { Component } from "react";
+import { Route, Routes } from 'react-router-dom';
 
-class Main extends Component {
+import Home from './Home';
+import Form from './Form';
+import ListNews from './ListNews';
+
+export class Main extends Component {
   render() {
-    return <div>Main</div>;
+    return <main>
+      <Routes>
+        <Route element = {<Home/>} path={"/"}/>
+        <Route element = {<Form/>} path={"/form"}/>
+        <Route element = {<ListNews/>} path={"/list"}/>
+      </Routes>
+    </main>;
   }
 }
 
