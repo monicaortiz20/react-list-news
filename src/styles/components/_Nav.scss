@@ -1,0 +1,19 @@
+.nav-bar{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 20px;
+    background-color: #F1DBCE;
+
+    &>*{
+        color: #686763;
+    }
+
+    & >a {
+        text-decoration: none;
+
+        &:hover{
+            color: #B8B5B0;
+        }
+    }
+
+}

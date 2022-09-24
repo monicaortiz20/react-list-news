@@ -1,0 +1,11 @@
+@import '../utils//mixins.scss';
+
+
+.footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:15vh;
+    color:#686763;
+    background-color: #F1DBCE;
+}
