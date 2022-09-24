@@ -12,7 +12,7 @@ class Nav extends Component {
       <Link to="/list">Listnews</Link>
 
       <userContext.Consumer> 
-        {({ user, logout }) => user ? <button onClick={logout}>Log out</button> : null}
+        {({ user, logout }) => user ? <button className="button-83" onClick={logout}>Log out</button> : null}
       </userContext.Consumer>
       {/* en el nav proveemos la func logout y user, si hay alguien registrado, que salga el btn */}
     </nav>;
