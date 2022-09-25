@@ -1,7 +1,11 @@
 @import './views/app';
 
-@import './components/Nav';
+@import './components/Header';
 @import './components/Footer';
 
 @import './components/Home';
 @import './components/Form';
+
+@import './components/Nav';
+@import './components/Listnews';
+@import './components/Card';

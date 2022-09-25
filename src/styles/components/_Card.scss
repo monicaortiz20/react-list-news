@@ -1,0 +1,22 @@
+.card {
+    @include column-centered-content;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px #686763 solid;
+    color: #686763;
+    margin: 20px
+}
+
+.header {
+    @include column-centered-content;
+    height: 30%;
+    background: #F1DBCE;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    @include column-centered-content;
+    padding: 2px 16px;
+}

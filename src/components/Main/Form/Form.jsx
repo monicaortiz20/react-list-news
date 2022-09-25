@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { Navigate } from 'react-router-dom';
 
 class Form extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-      // news       ----------------> revisar!!!!
+      sendTo:false
     }
   }
 
@@ -14,34 +15,38 @@ class Form extends Component {
 addNew = (e) => {
   e.preventDefault();
 
-  const title = e.target.title.value;
-  const subtitle = e.target.subtitle.value;
-  const description = e.target.description.value;
+  const abstract = e.target.abstract.value;
+  const snippet = e.target.snippet.value;
+  const lead_paragraph = e.target.lead_paragraph.value;
 
-  const createNew = {title, subtitle, description};
-  this.setState({news:[...this.state.news, createNew]})
+  const createNew = {abstract, snippet, lead_paragraph};
+  // para hacer un push al array de todas las news .push(newNews);
+  this.props.data(newNews)
+  this.setState({sendTo:true})
 
 }
 
-deleteNew = (i) => {
-  const remainingNews = this.state.news.filter((note, j) =>  i !== j)
-  this.setState({news:remainingNews})}
 
-
-
+ 
   render() {
+    const { sendTo } = this.state;
+    if(sendTo) {
+      return <Navigate to = "/list"/>
+    }
+
+
     return <section>
       <h1 className="title-section">Añade una noticia</h1>
       <form  className='form-news' onSubmit={this.addNew}>
-        <label htmlFor="title">Título:</label>
-        <input type="text" id="title" name="title" placeholder="Kiko Rivera se retira"/>
+        <label htmlFor="abstract">Título:</label>
+        <input type="text" id="abstract" name="abstract" placeholder="Ciencia experimental"/>
 
-        <label htmlFor="subtitle">Subtítulo:</label>
-        <input type="text" id="subtitle" name="subtitle" placeholder="Vuelve a estudiar"/>
+        <label htmlFor="snippet">Subtítulo:</label>
+        <input type="text" id="snippet" name="snippet" placeholder="Desarrollan vacuna"/>
 
-        <label htmlFor="description">Descripción:</label>
-        <textarea type="text" id="description" name="description" placeholder=".....Tras años sin dar palo al agua,..." rows="10" cols="50"/>
-        <button type="submit" value="añadir" onClick={this.addNew}>Añadir</button>
+        <label htmlFor="lead_paragraph">Descripción:</label>
+        <textarea type="text" id="lead_paragraph" name="lead_paragraph" placeholder=".....Tras años de estudio,..." rows="10" cols="50"/>
+        <button type="submit" value="añadir" className="button-83">Añadir</button>
       </form>
 
     </section>;
