@@ -21,7 +21,7 @@ addNew = (e) => {
 
   const createNew = {abstract, snippet, lead_paragraph};
   // para hacer un push al array de todas las news .push(newNews);
-  this.props.data(newNews)
+  this.props.data(createNew)
   this.setState({sendTo:true})
 
 }

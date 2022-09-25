@@ -37,7 +37,7 @@ export class ListNews extends Component {
 
 
   paintNotes(){
-    return allNews.map((note,i)=> <Card news={note} key={uuidv4()} delete={()=>this.deleteNew(i)}/>)
+    return news.map((note,i)=> <Card news={note} key={uuidv4()} delete={()=>this.deleteNew(i)}/>)
 
   }
   
@@ -49,7 +49,7 @@ export class ListNews extends Component {
 
   render() {
     //para que nos saque el array con todas las noticias: fetch + creadas
-    const allNews = this.state.news
+    const allNews = this.state.news //revisar 
 
     return <section>
       <h1>Noticias</h1>
