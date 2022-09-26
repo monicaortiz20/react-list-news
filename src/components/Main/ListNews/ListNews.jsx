@@ -23,9 +23,8 @@ export class ListNews extends Component {
 
   getNews = async() => {
     const response = await axios(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=${process.env.REACT_APP_API_KEY}`);
-    //accedemos a las noticias
-    const data = await response.data.response.docs;
-    // console.log(data)
+    const data = await response.data.response.docs; 
+    //nos devuelve la info en formato .json
     //para obtener copia de una parte del array principal, empezando por inicio (0)
     const dataArray = data.slice(0,6)
     const allNews = [...dataArray, ...this.props.data.news]
