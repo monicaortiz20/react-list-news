@@ -9,7 +9,7 @@ export class ListNews extends Component {
     super(props)
   
     this.state = {
-      news: []
+      ListNews: []
     }
   }
 
@@ -31,29 +31,25 @@ export class ListNews extends Component {
     const allNews = [...dataArray, ...this.props.data.news]
 
     this.setState({
-      news:allNews
+      ListNews:allNews
     })
   }
 
 
-  paintNotes(){
-    return news.map((note,i)=> <Card news={note} key={uuidv4()} delete={()=>this.deleteNew(i)}/>)
-
-  }
-  
-
   deleteNew = (i) => {
-   const remainingNews = this.state.news.filter((note, j) =>  i !== j)
-   this.setState({news:remainingNews})
+   const remainingNews = this.state.ListNews.filter((note, j) =>  i !== j)
+   this.setState({ListNews:remainingNews})
   }
 
   render() {
     //para que nos saque el array con todas las noticias: fetch + creadas
-    const allNews = this.state.news //revisar 
+    const allNews = this.state.ListNews
 
     return <section>
       <h1>Noticias</h1>
-      {this.paintNotes()}
+      {
+      allNews.map((notes,i)=> <Card news={notes} delete={()=>this.deleteNew(i)} key={uuidv4()} />)
+      }
     </section>;
   }
 }
