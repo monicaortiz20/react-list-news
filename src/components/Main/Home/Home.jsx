@@ -42,7 +42,7 @@ sendUserName = () => {
     return <div>
       <img src={news} alt="news" className="img-news" />
 
-      <div>
+      <div className="login">
         <h2>Introduce tu nombre</h2>
         <input type="text" placeholder="Introduce tu nombre" ref={this.username} onChange={this.handleChange}/>
         {this.state.username ? <button className="button-83" onClick={this.sendUserName}>Log in</button> : null}

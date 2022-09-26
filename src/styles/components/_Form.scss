@@ -2,6 +2,7 @@
 
 .form-news{
     @include column-centered-content;
+    margin-bottom:258px;
 
     &>label{
         margin: 10px;
@@ -16,7 +17,8 @@
 }
 
 .title-section{
-    color:#686763;
+  color:#686763;
+  margin:30px
 }
 
 

@@ -22,7 +22,7 @@ export class ListNews extends Component {
   }
 
   getNews = async() => {
-    const response = await axios('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=i0ohH3OIK9HtdSQuci1NXOXfOAqJ7ck8');
+    const response = await axios(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=${process.env.REACT_APP_API_KEY}`);
     //accedemos a las noticias
     const data = await response.data.response.docs;
     // console.log(data)
