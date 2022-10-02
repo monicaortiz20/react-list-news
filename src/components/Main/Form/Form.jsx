@@ -23,7 +23,6 @@ addNew = (e) => {
   // para hacer un push al array de todas las news .push(newNews);
   this.props.data(createNew)
   this.setState({sendTo:true})
-
 }
 
 
