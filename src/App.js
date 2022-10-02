@@ -27,6 +27,7 @@ const logout= () => {
   setUser(""); //aquí le decimos que el user está vacío
 }
 
+
 //Creamos objeto para enviar datos a los consumidores:
 const data = {
   user, 
