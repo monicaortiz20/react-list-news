@@ -39,6 +39,26 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Views
+
+Main page has different navigation options. The user can view the news already published in the api without having to log in, or they can log in it and add their own news.
+
+![image](https://user-images.githubusercontent.com/107259913/193449598-f14f431a-f33a-4ac3-961b-c68f436222e5.png)
+
+Once the user has logged in, he/she can access the form to create his/her own new news.
+
+ file:///home/monica/Descargas/create%20news.gif
+ 
+ 
+Those news will be added to the existing ones.
+
+ file:///home/monica/Descargas/allnews.gif
+
+In case the users want to delete a news item in particular, either their own or from the Api, they can do it by clicking on the button in each new. That new will be deleted, while the rest will remain visible.
+
+ file:///home/monica/Descargas/delete%20news.gif
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
