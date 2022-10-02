@@ -47,16 +47,18 @@ Main page has different navigation options. The user can view the news already p
 
 Once the user has logged in, he/she can access the form to create his/her own new news.
 
- file:///home/monica/Descargas/create%20news.gif
- 
+![create news](https://user-images.githubusercontent.com/107259913/193450095-8564f672-69f9-42c8-89cc-aa7a9da47a62.gif)
+
  
 Those news will be added to the existing ones.
 
- file:///home/monica/Descargas/allnews.gif
+![allnews](https://user-images.githubusercontent.com/107259913/193450113-83eeacb4-1fbe-434d-b51c-3167478660c5.gif)
+
 
 In case the users want to delete a news item in particular, either their own or from the Api, they can do it by clicking on the button in each new. That new will be deleted, while the rest will remain visible.
 
- file:///home/monica/Descargas/delete%20news.gif
+![delete news](https://user-images.githubusercontent.com/107259913/193450118-1caad660-4162-41f1-92ea-83a51e0cf794.gif)
+
 
 
 ## Learn More
